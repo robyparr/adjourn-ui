@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",
+    "feather-icons": "^4.28.0",
     "postcss": "^8.2.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^13.0.0",

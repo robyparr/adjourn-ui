@@ -5,3 +5,8 @@ layout: default
 ---
 
 <a target="top"><h3 class="page-header">Documentation</h3></a>
+
+{% for component in site.component_documentation %}
+  <h4 class="section-header">{{ component.name }}</h4>
+  <p>{{ component.content }}</p>
+{% endfor %}

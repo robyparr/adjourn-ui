@@ -1,3 +1,7 @@
 <nav>
   <a href="#top" class="navigation-item">Top</a>
+
+  {% for component in components %}
+    <a href="#{{ component.name }}" class="navigation-item">{{ component.name }}</a>
+  {% endfor %}
 </nav>

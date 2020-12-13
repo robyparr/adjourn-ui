@@ -6,5 +6,11 @@
 @import "./tailwindcss/components/sidebar.css";
 @import "./tailwindcss/components/navigation.css";
 @import "./tailwindcss/components/typography.css";
+@import "./tailwindcss/components/button.css";
 
 @import "tailwindcss/utilities";
+
+
+.component-examples {
+  @apply flex items-center bg-gray-300 p-4;
+}
