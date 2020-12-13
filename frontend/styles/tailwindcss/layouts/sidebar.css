@@ -1,0 +1,13 @@
+.sidebar-layout {
+  @apply flex w-full h-screen;
+
+  &.small {
+    .sidebar {
+      width: 12%;
+    }
+
+    main {
+      width: 88%;
+    }
+  }
+}

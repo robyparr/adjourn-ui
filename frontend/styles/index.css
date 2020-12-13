@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import "./tailwindcss/layouts/sidebar.css";
+
+@import "./tailwindcss/components/sidebar.css";
+@import "./tailwindcss/components/navigation.css";
+@import "./tailwindcss/components/typography.css";
+
+@import "tailwindcss/utilities";

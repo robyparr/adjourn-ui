@@ -1,0 +1,18 @@
+.sidebar {
+  @apply border-r shadow-inner overflow-y-auto;
+  background-color: #efefef;
+
+  .header {
+    @apply p-4 mb-8;
+
+    h1 { @apply text-lg font-bold; }
+    h2 { @apply text-sm opacity-75; }
+  }
+}
+
+@screen md {
+  /* .sidebar {
+    &.small { width: 12%; }
+    &.medium { @apply w-1/5; }
+  } */
+}

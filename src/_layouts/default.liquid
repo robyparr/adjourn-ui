@@ -4,12 +4,17 @@
     {% render "head", metadata: site.metadata, title: page.title %}
   </head>
   <body class="{{ page.layout }} {{ page.page_class }}">
-    {% render "navbar", metadata: site.metadata, page: page %}
-
-    <main>
-      {{ content }}
-    </main>
-
-    {% render "footer", metadata: site.metadata %}
+    <div class="small sidebar-layout">
+      <aside class="sidebar">
+        <div class="header">
+          <h1>Tailwind Sails</h1>
+          <h2>Sails to expedite your TailwindCSS experience.</h2>
+        </div>
+        {% render "navigation", metadata: site.metadata, page: page %}
+      </aside>
+      <main class="p-4">
+        {{ content }}
+      </main>
+    </div>
   </body>
 </html>

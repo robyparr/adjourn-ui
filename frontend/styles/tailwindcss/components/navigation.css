@@ -1,0 +1,17 @@
+nav {
+  @apply flex flex-col;
+
+  .navigation-item {
+    @apply pl-4;
+
+    &:not(.simple) {
+      @apply block border;
+
+      &:not(:hover) { @apply border-transparent; }
+
+      &:hover {
+        @apply bg-gray-300 border;
+      }
+    }
+  }
+}
