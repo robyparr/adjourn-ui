@@ -4,9 +4,11 @@
 layout: default
 ---
 
-<a target="top"><h3 class="page-header">Documentation</h3></a>
+<a name="top"><h3 class="page-header">Documentation</h3></a>
 
 {% for component in site.component_documentation %}
-  <h4 class="section-header">{{ component.name }}</h4>
+  <a name="{{ component.name }}">
+    <h4 class="section-header mt-8">{{ component.name }}</h4>
+  </a>
   <p>{{ component.content }}</p>
 {% endfor %}
