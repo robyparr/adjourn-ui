@@ -7,9 +7,7 @@
     .card-title {
       @apply text-2xl;
 
-      input {
-        @apply text-base -ml-2;
-      }
+      input { @apply text-base -ml-2; }
     }
 
     .card-actions {
@@ -26,6 +24,13 @@
         }
       }
     }
+  }
+
+  .card-status {
+    @apply flex items-center -mt-2 opacity-50 px-4;
+
+    >*:not(:last-child) { @apply mr-2; }
+    .icon { @apply w-3; }
   }
 
   .card-content {
