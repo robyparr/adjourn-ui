@@ -4,13 +4,16 @@
     {% render "head", metadata: site.metadata, title: page.title %}
   </head>
   <body class="{{ page.layout }} {{ page.page_class }}">
-    <div class="small sidebar-layout">
-      <aside class="sidebar">
-        <div class="header">
-          <h1>Adjourn UI</h1>
-          <h2>CSS UI framework for Adjourn. Built with Tailwind CSS.</h2>
+    <div class="sidebar-layout">
+      <aside class="small sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-header">
+            <h1>Adjourn UI</h1>
+            <h2>CSS UI framework for Adjourn. Built with Tailwind CSS.</h2>
+          </div>
+
+          {% render "navigation", metadata: site.metadata, page: page, components: site.component_documentation %}
         </div>
-        {% render "navigation", metadata: site.metadata, page: page, components: site.component_documentation %}
       </aside>
       <main class="p-4">
         {{ content }}

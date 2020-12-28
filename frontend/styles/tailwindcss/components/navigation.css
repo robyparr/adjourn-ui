@@ -2,7 +2,7 @@ nav {
   @apply flex flex-col;
 
   .navigation-item {
-    @apply pl-4;
+    @apply pl-4 mb-2;
 
     &:not(.simple) {
       @apply block border;
@@ -13,5 +13,7 @@ nav {
         @apply bg-gray-300 border;
       }
     }
+
+    a { @apply block py-1; }
   }
 }

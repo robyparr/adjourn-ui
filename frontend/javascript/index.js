@@ -1,4 +1,7 @@
 import "../styles/index.css"
 const feather = require('feather-icons')
 
-feather.replace();
+window.onload = () => feather.replace()
+
+import Sidebar from "./components/Sidebar"
+window.Sidebar = Sidebar

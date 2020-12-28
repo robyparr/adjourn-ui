@@ -17,8 +17,12 @@
   }
 
   &.icon-only {
-    @apply inline-flex items-center px-1 py-1 shadow-none bg-transparent;
-    &:not(:hover) { @apply border-transparent; }
+    @apply inline-flex items-center px-1 py-1 shadow-none;
+
+    &.link {
+      @apply bg-transparent;
+      &:not(:hover) { @apply border-transparent; }
+    }
 
     &.primary:not(:hover) { @apply text-black; }
     .icon { @apply w-4 h-4; }

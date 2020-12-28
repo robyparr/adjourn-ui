@@ -1,18 +1,50 @@
 .sidebar {
-  @apply border-r shadow-inner overflow-y-auto;
+  @apply relative flex flex-col justify-between border-r shadow-inner overflow-y-auto
+         transition-all ease-in-out duration-500;
   background-color: #efefef;
+  min-width: 250px;
 
-  .header {
-    @apply p-4 mb-8;
+  &.small {
+    min-width: 100px;
+    max-width: 175px;
+  }
 
-    h1 { @apply text-lg font-bold; }
-    h2 { @apply text-sm opacity-75; }
+  .sidebar-content {
+    @apply overflow-x-auto;
+
+    .sidebar-header {
+      @apply text-center p-4 my-8;
+
+      img { @apply inline; }
+
+      h1 { @apply text-lg font-bold; }
+      h2 { @apply text-sm opacity-75; }
+    }
+  }
+
+  .sidebar-footer {
+    @apply p-2;
+  }
+
+  /* Collapsing & Expanding */
+  .collapse-button {
+    @apply absolute right-0 -mr-2;
+    top: 100px;
+  }
+
+  &:not(.collapsed) .hidden-expanded { @apply hidden; }
+  &.collapsed {
+    .hidden-collapsed { @apply hidden; }
+
+    .media {
+      @apply flex justify-center;
+      .media-text { @apply hidden; }
+    }
+
+    .navigation-item { @apply pl-0; }
   }
 }
 
-@screen md {
-  /* .sidebar {
-    &.small { width: 12%; }
-    &.medium { @apply w-1/5; }
-  } */
+.sidebar-overlay {
+  @apply hidden w-full fixed inset-x-0 inset-y-0 bg-black opacity-25 z-10 cursor-pointer;
 }
