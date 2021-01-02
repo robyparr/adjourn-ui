@@ -1,5 +1,5 @@
 .card {
-  @apply bg-white border rounded;
+  @apply bg-white border rounded shadow;
 
   .card-header {
     @apply flex justify-between px-4 pt-3;
