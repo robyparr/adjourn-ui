@@ -12,6 +12,7 @@
 @import "./tailwindcss/components/alert.css";
 @import "./tailwindcss/components/badge.css";
 @import "./tailwindcss/components/form.css";
+@import "./tailwindcss/components/grid.css";
 
 @import "tailwindcss/utilities";
 
@@ -21,4 +22,10 @@
 
   &.vertical { @apply flex-col; }
   &.alternate-color { @apply bg-gray-100; }
+}
+
+.example-grid {
+  @apply bg-gray-100 p-4;
+
+  .column { @apply border; }
 }
