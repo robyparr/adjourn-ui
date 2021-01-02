@@ -9,10 +9,13 @@
 @import "./tailwindcss/components/button.css";
 @import "./tailwindcss/components/card.css";
 @import "./tailwindcss/components/media.css";
+@import "./tailwindcss/components/alert.css";
 
 @import "tailwindcss/utilities";
 
 
 .component-examples {
   @apply flex items-center bg-gray-300 p-4;
+
+  &.vertical { @apply flex-col; }
 }
