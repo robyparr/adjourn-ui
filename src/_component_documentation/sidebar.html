@@ -2,11 +2,11 @@
 name: Sidebars
 ---
 
+<strong class="block">Navigation Sidebar</strong>
 <div class="component-examples space-x-4">
   <div class="sidebar-layout">
 
-    <div id="example-sidebar-overlay" class="sidebar-overlay">&nbsp;</div>
-    <div id="example-sidebar" class="sidebar -ml-4 overflow-hidden">
+    <div id="example-sidebar" class="sidebar -ml-4 push-content overflow-hidden">
       <div class="sidebar-content">
         <button class="button icon-only collapse-button">
           <i data-feather="chevron-left" class="icon hidden-collapsed"></i>
@@ -78,16 +78,50 @@ name: Sidebars
   </div>
 </div>
 
+<strong class="block">Extra Content Sidebar</strong>
+<div class="component-examples space-x-4">
+  <div class="sidebar-layout">
+
+    <div id="extra-content-sidebar-overlay" class="sidebar-overlay">&nbsp;</div>
+    <div id="extra-content-sidebar" class="sidebar -ml-4 overflow-hidden slide-over">
+      <div class="sidebar-content">
+        <div class="sidebar-header">
+          <h1 class="mt-4 hidden-collapsed">Extra Content</h1>
+          <h2 class="hidden-collapsed">This sidebar contains extra content.</h2>
+        </div>
+
+        <p class='p-4'>Yay extra content.</p>
+      </div>
+    </div>
+
+    <main class="bg-white p-8">
+      <p>This is the main content.</p>
+
+      <button id="hide-extra-sidebar" class="button primary">Hide</button>
+      <button id="show-extra-sidebar" class="button">Show</button>
+    </main>
+
+  </div>
+</div>
 
 <script>
-  var sidebar = new window.Sidebar({
+  var exampleSidebar = new window.Sidebar({
     sidebarSelector: '#example-sidebar',
-    sidebarOverlaySelector: '#example-sidebar-overlay',
+    sidebarOverlaySelector: null,
   });
 
-  document.querySelector('#hide-sidebar').addEventListener('click', () => sidebar.hide());
-  document.querySelector('#show-sidebar').addEventListener('click', () => sidebar.show());
+  document.querySelector('#hide-sidebar').addEventListener('click', () => exampleSidebar.hide());
+  document.querySelector('#show-sidebar').addEventListener('click', () => exampleSidebar.show());
 
-  document.querySelector('#collapse-sidebar').addEventListener('click', () => sidebar.collapse());
-  document.querySelector('#expand-sidebar').addEventListener('click', () => sidebar.expand());
+  document.querySelector('#collapse-sidebar').addEventListener('click', () => exampleSidebar.collapse());
+  document.querySelector('#expand-sidebar').addEventListener('click', () => exampleSidebar.expand());
+
+  var extraContentSidebar = new window.Sidebar({
+    sidebarSelector: '#extra-content-sidebar',
+    sidebarOverlaySelector: '#extra-content-sidebar-overlay',
+    hidden: true,
+  });
+
+  document.querySelector('#hide-extra-sidebar').addEventListener('click', () => extraContentSidebar.hide());
+  document.querySelector('#show-extra-sidebar').addEventListener('click', () => extraContentSidebar.show());
 </script>

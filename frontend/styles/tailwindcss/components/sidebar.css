@@ -1,12 +1,11 @@
 .sidebar {
-  @apply relative flex flex-col justify-between border-r shadow-inner overflow-y-auto
-         transition-all ease-in-out duration-500;
+  @apply absolute inset-y-0 left-0 flex flex-col justify-between border-r shadow-inner overflow-y-auto
+         transition-all ease-in-out duration-500 z-20;
   background-color: #efefef;
-  min-width: 250px;
+  width: 250px;
 
   &.small {
-    min-width: 100px;
-    max-width: 175px;
+    width: 175px;
   }
 
   .sidebar-content {
@@ -47,4 +46,12 @@
 
 .sidebar-overlay {
   @apply hidden w-full fixed inset-x-0 inset-y-0 bg-black opacity-25 z-10 cursor-pointer;
+}
+
+@screen md {
+  .sidebar {
+    @apply relative;
+
+    &.slide-over { @apply absolute inset-y-0 left-0; }
+  }
 }

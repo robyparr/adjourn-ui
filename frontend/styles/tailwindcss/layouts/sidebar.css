@@ -1,17 +1,7 @@
 .sidebar-layout {
-  @apply flex w-full h-screen;
+  @apply relative flex w-full h-screen;
 
   main {
     @apply flex-grow overflow-y-auto;
   }
-  /* &.small {
-    .sidebar {
-      width: 12%;
-    }
-
-    main {
-      @apply overflow-y-auto;
-      width: 88%;
-    }
-  } */
 }

@@ -5,20 +5,24 @@ class Sidebar {
       sidebarOverlaySelector = '.sidebar-overlay',
       collapseButtonSelector = '.collapse-button',
       mainContentSelector = 'main',
+      hidden = false,
+      hideOnMobile = true,
+      mobileSize = 639,
     } = options)
 
     this.sidebar = document.querySelector(sidebarSelector)
     this.sidebarOverlay = document.querySelector(sidebarOverlaySelector)
     this.collapseButton = this.sidebar.querySelector(collapseButtonSelector)
     this.mainContent = document.querySelector(mainContentSelector)
+    this.mobileSize = mobileSize
 
     this.setupListeners()
 
-    if (this.isHidden()) this.hide()
+    if (hidden || (hideOnMobile && this.isMobile())) this.hide()
   }
 
-  isHidden() {
-    return this.sidebar.classList.contains('sidebar-hidden')
+  isMobile() {
+    return window.innerWidth <= this.mobileSize
   }
 
   isCollapsed() {
@@ -42,16 +46,27 @@ class Sidebar {
     this.sidebar.classList.remove('collapsed')
   }
 
+  shouldPushContent() {
+    return this.sidebar.classList.contains('push-content')
+  }
+
   show() {
-    this.sidebar.style.marginLeft = ''
-    this.sidebar.classList.remove('sidebar-hidden')
+    if (this.shouldPushContent()) {
+      this.sidebar.style.marginLeft = ''
+    } else {
+      this.sidebar.classList.remove('-translate-x-full')
+    }
     if (this.sidebarOverlay) this.sidebarOverlay.style.display = 'block'
   }
 
   hide() {
-    let sidebarWidth = this.sidebar.offsetWidth
-    this.sidebar.style.marginLeft = `-${sidebarWidth}px`
-    this.sidebar.classList.add('sidebar-hidden')
+    if (this.shouldPushContent()) {
+      let sidebarWidth = this.sidebar.offsetWidth
+      this.sidebar.style.marginLeft = `-${sidebarWidth}px`
+    } else {
+      this.sidebar.classList.add('transform')
+      this.sidebar.classList.add('-translate-x-full')
+    }
     if (this.sidebarOverlay) this.sidebarOverlay.style.display = 'none'
   }
 

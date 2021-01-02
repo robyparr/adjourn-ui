@@ -5,7 +5,8 @@
   </head>
   <body class="{{ page.layout }} {{ page.page_class }}">
     <div class="sidebar-layout">
-      <aside class="small sidebar">
+      <div id="documentation-sidebar-overlay" class="sidebar-overlay">&nbsp;</div>
+      <aside id="documentation-sidebar" class="small sidebar">
         <div class="sidebar-content">
           <div class="sidebar-header">
             <h1>Adjourn UI</h1>
@@ -16,8 +17,23 @@
         </div>
       </aside>
       <main class="p-4">
+        <nav class="md:hidden bg-gray-200 px-1 py-4">
+          <button type="button" id="open-documentation-sidebar">
+            <i data-feather="menu"></i>
+          </button>
+        </nav>
         {{ content }}
       </main>
     </div>
+
+    <script>
+      var sidebar = new window.Sidebar({
+        sidebarSelector: '#documentation-sidebar',
+        sidebarOverlaySelector: '#documentation-sidebar-overlay',
+      });
+
+      var openDocumentationSidebar = document.querySelector('#open-documentation-sidebar');
+      openDocumentationSidebar.addEventListener('click', () => sidebar.show());
+    </script>
   </body>
 </html>
