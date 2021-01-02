@@ -10,6 +10,7 @@
 @import "./tailwindcss/components/card.css";
 @import "./tailwindcss/components/media.css";
 @import "./tailwindcss/components/alert.css";
+@import "./tailwindcss/components/badge.css";
 
 @import "tailwindcss/utilities";
 
@@ -18,4 +19,5 @@
   @apply flex items-center bg-gray-300 p-4;
 
   &.vertical { @apply flex-col; }
+  &.alternate-color { @apply bg-gray-100; }
 }
