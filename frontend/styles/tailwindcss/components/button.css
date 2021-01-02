@@ -44,3 +44,5 @@
     &:not(:hover) { border-left-color: transparant; }
   }
 }
+
+a { @apply text-blue-500 no-underline; }
