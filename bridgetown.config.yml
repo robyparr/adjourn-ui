@@ -23,4 +23,5 @@ permalink: pretty
 # timezone: America/Los_Angeles
 
 collections:
-  - component_documentation
+  component_documentation:
+    output: true

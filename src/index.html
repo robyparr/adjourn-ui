@@ -7,8 +7,9 @@ layout: default
 <a name="top"><h3 class="page-header">Documentation</h3></a>
 
 {% for component in site.component_documentation %}
-  <a name="{{ component.name }}">
-    <h4 class="section-header mt-8">{{ component.name }}</h4>
-  </a>
+  <h4 class="section-header mt-8">
+    <a name="{{ component.name }}">{{ component.name }}</a>
+    <span class="text-sm">(<a href="{{  component.url }}">Page</a>)</span>
+  </h4>
   <p>{{ component.content }}</p>
 {% endfor %}
