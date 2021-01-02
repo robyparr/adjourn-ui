@@ -1,0 +1,76 @@
+---
+name: Form
+layout: default
+---
+
+<strong class="block">Text Inputs</strong>
+<div class="alternate-color component-examples space-x-2">
+  <div>
+    <label for="basic-text">Basic Text Input</label>
+    <input type="text" id="basic-text" placeholder="Placeholder text..." />
+  </div>
+
+  <div>
+    <label for="error-text">Errored Text Input</label>
+    <input type="text" id="error-text" class="error" placeholder="Placeholder text..." />
+  </div>
+
+  <div>
+    <label for="disabled-text">Disabled Text Input</label>
+    <input type="text" id="disabled-text" placeholder="Placeholder text..." disabled="disabled" />
+  </div>
+</div>
+
+<div class="alternate-color component-examples space-x-2">
+  <div>
+    <label for="basic-radio" class="inline-label">
+      <input type="radio" id="basic-radio" value="radio" name="basic-radio" checked="checked" />
+      <span class="text">Basic Radio</span>
+    </label>
+  </div>
+
+  <div>
+    <label for="basic-checkbox" class="inline-label">
+      <input type="checkbox" id="basic-checkbox" checked="checked" />
+      <span class="text">Basic Checkbox</span>
+    </label>
+  </div>
+
+  <div>
+    <label for="disabled-checkbox" class="inline-label">
+      <input type="checkbox" id="disabled-checkbox" disabled="disabled" />
+      <span class="text">Disabled Checkbox</span>
+    </label>
+  </div>
+</div>
+
+<div class="alternate-color component-examples space-x-2">
+  <div>
+    <label for="basic-select">Basic Select</label>
+    <select id="basic-select">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <div>
+    <label for="disabled-select">Disabled Select</label>
+    <select id="disabled-select" disabled="disabled">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+</div>
+
+<div class="alternate-color component-examples space-x-2">
+  <div>
+    <label for="basic-textarea">Basic Text Area</label>
+    <textarea id="basic-textarea" cols="30" rows="2"></textarea>
+  </div>
+
+  <div>
+    <label for="disabled-textarea">Disabled Text Area</label>
+    <textarea id="disabled-textarea" cols="30" rows="2" disabled="disabled"></textarea>
+  </div>
+</div>
