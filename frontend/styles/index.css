@@ -14,6 +14,7 @@
 @import "./tailwindcss/components/form.css";
 @import "./tailwindcss/components/grid.css";
 @import "./tailwindcss/components/list.css";
+@import "./tailwindcss/components/menu.css";
 
 @import "tailwindcss/utilities";
 

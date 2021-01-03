@@ -1,0 +1,42 @@
+---
+name: Menus
+layout: default
+---
+
+<strong class="block">Menus</strong>
+<div class="component-examples space-x-2">
+  <div id="basic-menu" class="menu">
+    <button type="button"><i data-feather="more-vertical"></i></button>
+    <ul class="menu-items">
+      <li class="menu-item">Item 1</li>
+      <li class="menu-item">Item 2</li>
+      <li class="menu-item">Item 3</li>
+    </ul>
+  </div>
+
+  <div id="menu-with-icons" class="menu">
+    <button type="button" class="icon-only link button">
+      <i data-feather="more-vertical"></i>
+    </button>
+
+    <ul class="menu-items">
+      <li class="menu-item">
+        <i data-feather="database" class="icon"></i>
+        Item 1
+      </li>
+      <li class="menu-item">
+        <i data-feather="monitor" class="icon"></i>
+        Item 2
+      </li>
+      <li class="menu-item">
+        <i data-feather="package" class="icon"></i>
+        Item 3
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  var basicMenu = new window.Menu({ el: '#basic-menu' });
+  var menuWithIcons = new window.Menu({ el: '#menu-with-icons' });
+</script>
