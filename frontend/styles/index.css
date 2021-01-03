@@ -13,6 +13,7 @@
 @import "./tailwindcss/components/badge.css";
 @import "./tailwindcss/components/form.css";
 @import "./tailwindcss/components/grid.css";
+@import "./tailwindcss/components/list.css";
 
 @import "tailwindcss/utilities";
 

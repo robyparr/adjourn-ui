@@ -1,0 +1,13 @@
+.list {
+  @apply rounded shadow border;
+
+  li.list-item {
+    @apply flex items-center justify-between p-4 border-b bg-white relative;
+
+    &.list-header { @apply font-bold; }
+    &:first-child { @apply rounded-t; }
+    &:last-child { @apply rounded-b; }
+
+    .list-item-content { @apply flex flex-col w-full; }
+  }
+}
