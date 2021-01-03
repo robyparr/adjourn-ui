@@ -1,0 +1,26 @@
+---
+name: Modals
+layout: default
+---
+
+<strong class="block">Modals</strong>
+<div class="vertical h-screen component-examples space-y-2">
+  <button id="open-modal" type="button" class="primary button">Open Modal</button>
+  <div id="example-modal" class="modal opened">
+    <div class="modal-title">Modal Title</div>
+    <div class="modal-content">
+      <p>This is an example modal.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="close-modal link button">Close</button>
+      <button type="button" class="primary button">Submit</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var modal = new window.Modal({ el: '#example-modal' })
+  modal.open()
+
+  document.querySelector('#open-modal').addEventListener('click', () => modal.open())
+</script>

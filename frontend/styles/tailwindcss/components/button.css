@@ -27,6 +27,10 @@
     &.primary:not(:hover) { @apply text-black; }
     .icon { @apply w-4 h-4; }
   }
+
+  &.link {
+    &:not(:hover) { @apply bg-transparent border-transparent shadow-none; }
+  }
 }
 
 .button-group {

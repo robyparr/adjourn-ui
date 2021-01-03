@@ -1,0 +1,36 @@
+.modal-overlay { @apply fixed inset-x-0 inset-y-0 bg-black opacity-25 z-30; }
+
+.modal {
+  @apply bg-white rounded shadow-lg relative z-50 m-auto fixed border;
+
+  top: 25%;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  width: fit-content;
+  min-width: 300px;
+  max-width: calc(100vw - 10%);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+
+  .modal-title {
+    @apply font-bold text-xl px-6 py-4;
+
+    h1, h2, h3, h4, h5, h6 { @apply my-0; }
+  }
+
+  .modal-content { @apply text-base px-6 pb-4; }
+
+  .modal-footer {
+    @apply rounded-b text-right py-2 bg-gray-200 px-4 w-full;
+
+    * { @apply ml-2; }
+  }
+
+  /* &:not(.opened) { @apply hidden; } */
+  &.opened {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

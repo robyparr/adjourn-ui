@@ -15,6 +15,7 @@
 @import "./tailwindcss/components/grid.css";
 @import "./tailwindcss/components/list.css";
 @import "./tailwindcss/components/menu.css";
+@import "./tailwindcss/components/modal.css";
 
 @import "tailwindcss/utilities";
 
