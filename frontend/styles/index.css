@@ -18,6 +18,7 @@
 @import "./tailwindcss/components/modal.css";
 @import "./tailwindcss/components/pagination.css";
 @import "./tailwindcss/components/table.css";
+@import "./tailwindcss/components/toast.css";
 
 @import "tailwindcss/utilities";
 

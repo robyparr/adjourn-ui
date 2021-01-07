@@ -1,0 +1,31 @@
+---
+name: Toasts
+layout: default
+---
+
+<strong class="block">Toasts</strong>
+<div class="component-examples space-x-2 relative" style="min-height: 400px;">
+  <button type="button" id="info-toast-button" class="button">Show Info Toast</button>
+  <button type="button" id="error-toast-button" class="danger button">Show Error Toast</button>
+  <div class="toast-container" style="position: absolute;">
+    <div class="visible info toast">
+      This is some information.
+    </div>
+
+    <div class="visible error toast">
+      This is an error.
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelector('#info-toast-button').addEventListener('click', function() {
+    var toast = new window.Toast('info', 'This is an info toast.');
+    toast.show();
+  });
+
+  document.querySelector('#error-toast-button').addEventListener('click', function() {
+    var toast = new window.Toast('error', 'This is an error toast.');
+    toast.show();
+  });
+</script>
