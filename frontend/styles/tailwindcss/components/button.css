@@ -49,4 +49,9 @@
   }
 }
 
-a { @apply text-blue-500 no-underline; }
+a {
+  @apply text-blue-500 no-underline;
+
+  &.with-icon { @apply flex items-center; }
+  .icon { @apply w-4; }
+}
