@@ -1,0 +1,26 @@
+.table-container {
+  @apply shadow overflow-x-auto border;
+
+  table { @apply border-0; }
+}
+
+table {
+  @apply bg-white shadow w-full rounded border;
+
+  thead tr { @apply border-b; }
+  tbody tr:last-child { @apply border-0; }
+
+  tr {
+    td, th { @apply p-4 text-left; }
+    td:last-child, th:last-child { @apply pr-4; }
+
+    &:not(:last-child) { @apply border-b; }
+
+    .actions {
+      @apply flex items-center justify-end;
+
+      > * { @apply ml-4; }
+    }
+  }
+}
+
