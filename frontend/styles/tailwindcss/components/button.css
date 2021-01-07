@@ -55,7 +55,7 @@
 }
 
 a {
-  @apply text-blue-500 no-underline;
+  &:not(.unstyled) { @apply text-blue-500 no-underline; }
 
   &.with-icon { @apply flex items-center; }
   .icon { @apply w-4; }

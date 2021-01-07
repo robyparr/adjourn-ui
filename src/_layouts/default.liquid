@@ -9,11 +9,18 @@
       <aside id="documentation-sidebar" class="small sidebar">
         <div class="sidebar-content">
           <div class="sidebar-header">
-            <h1>Adjourn UI</h1>
-            <h2>CSS UI framework for Adjourn. Built with Tailwind CSS.</h2>
+            <img src="favicon.png" alt="Adjourn Logo" />
+            <h1 class="mt-4">Adjourn UI</h1>
+            <h2>CSS UI framework for <a href="https://adjourn.io">Adjourn</a>. Built with Tailwind CSS.</h2>
           </div>
 
           {% render "navigation", metadata: site.metadata, page: page, components: site.component_documentation %}
+        </div>
+        <div class="sidebar-footer flex justify-center">
+          <a href="https://github.com/robyparr/adjourn-ui" class="with-icon">
+            <i class="icon mr-1" data-feather="github"></i>
+            Code
+          </a>
         </div>
       </aside>
       <main class="p-4">

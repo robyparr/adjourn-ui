@@ -20,6 +20,7 @@
 @import "./tailwindcss/components/table.css";
 @import "./tailwindcss/components/toast.css";
 @import "./tailwindcss/components/tooltip.css";
+@import "./tailwindcss/components/misc.css";
 
 @import "tailwindcss/utilities";
 

@@ -4,12 +4,16 @@
 layout: default
 ---
 
-<a name="top"><h3 class="page-header">Documentation</h3></a>
+<a name="top" class="unstyled"><h3 class="page-header">Documentation</h3></a>
 
 {% for component in site.component_documentation %}
-  <h4 class="section-header mt-8">
-    <a name="{{ component.name }}">{{ component.name }}</a>
-    <span class="text-sm">(<a href="{{  component.url }}">Page</a>)</span>
+  <h4 class="section-header flex items-center space-x-2">
+    <a name="{{ component.name }}" class="unstyled">{{ component.name }}</a>
+    <a href="{{  component.url }}" data-tooltip="Open in its own page" class="text-sm">
+      <i class="icon" data-feather="link"></i>
+    </a>
   </h4>
+  <hr class="-mt-2 mb-2" />
   <p>{{ component.content }}</p>
+  <div class="mb-4">&nbsp;</div>
 {% endfor %}
